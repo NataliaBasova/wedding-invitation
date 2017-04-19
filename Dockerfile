@@ -13,7 +13,8 @@ RUN set -ex \
     && npm install express \
     && npm install body-parser \
     && npm install \
-    && ./node_modules/webpack/bin/webpack.js
+    && ./node_modules/webpack/bin/webpack.js \
+    && echo "[]" > wishes.json
 
 EXPOSE 8080
 
