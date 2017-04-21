@@ -1,8 +1,7 @@
 import React from 'react';
-import InstagrammList from './InstagrammList.jsx'
+import InstagramList from './InstagramList.jsx'
 
-//noinspection JSAnnotator
-const InstagrammBox = React.createClass({
+const InstagramBox = React.createClass({
     getInitialState(){
         return {
             result: []
@@ -23,10 +22,10 @@ const InstagrammBox = React.createClass({
     render() {
         return (
             <section className="insta-section">
-                <InstagrammList result={this.state.result}/>
+                <InstagramList result={this.state.result}/>
             </section>
         );
     }
 });
 
-export default InstagrammBox;
+export default InstagramBox;

@@ -1,5 +1,4 @@
 import React from 'react';
-import Lightbox from 'react-images';
 
 const InstagramImg = React.createClass({
 
@@ -16,8 +15,3 @@ const InstagramImg = React.createClass({
     }
 });
 export default InstagramImg;
-
-{/*<div>*/}
-{/*<img src={this.props.data.low_resolution.url} alt=""/>*/}
-{/*<img src={this.props.data.standard_resolution.url} alt=""/>*/}
-{/*</div>*/}

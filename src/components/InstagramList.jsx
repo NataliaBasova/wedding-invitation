@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import Lightbox from 'react-images';
-import InstagramImg from './InstagrammImg.jsx'
+import InstagramImg from './InstagramImg.jsx'
 
 export default class InstagrammList extends Component {
 
@@ -12,6 +12,7 @@ export default class InstagrammList extends Component {
             currentImage: 0,
             urls: [],
         };
+
         this.closeLightbox = this.closeLightbox.bind(this);
         this.gotoNext = this.gotoNext.bind(this);
         this.gotoPrevious = this.gotoPrevious.bind(this);
@@ -25,7 +26,6 @@ export default class InstagrammList extends Component {
             currentImage: index,
             lightboxIsOpen: true,
         });
-
     }
 
     closeLightbox () {
@@ -45,14 +45,7 @@ export default class InstagrammList extends Component {
         const instaNodes = this.props.result.map((result, i) => {
 
             return (
-                <a
-                    className="insta-img"
-                    key={i}
-                    href={result.images.standard_resolution.url}
-                    onClick={(e) => this.openLightbox(i, e)}
-                >
-                    <img src={result.images.low_resolution.url} />
-                </a>
+                <InstagramImg data={result.images} key={i} imgClick={(e) => this.openLightbox(i, e)}/>
             );
         });
 
@@ -70,7 +63,6 @@ export default class InstagrammList extends Component {
 
         });
 
-
         this.setState({urls: urlsImg});
     }
 
@@ -78,8 +70,6 @@ export default class InstagrammList extends Component {
         this.getImage();
         setTimeout(this.getImage, 3000);
     }
-
-
 
     render() {
         return(
