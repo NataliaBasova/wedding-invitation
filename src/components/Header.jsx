@@ -6,7 +6,7 @@ const Header = React.createClass({
     render() {
         return (
             <header className="header">
-                <div className="header-container">
+                <div className="header-container container">
                     <Logo />
                     <Navigation/>
                 </div>

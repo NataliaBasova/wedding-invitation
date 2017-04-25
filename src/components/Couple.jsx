@@ -4,20 +4,22 @@ const Couple = React.createClass({
     render() {
         return (
            <section className="couple">
-               <div className="couple-container">
-                    <div className="photo-item">
-                        <img src="./img/couple/groom1.jpg" alt="Дима"/>
-                        <div className="his-her-name">
-                            <h2>ШМАТОВ<span className="last-name">&nbsp;Дима</span></h2>
-                        </div>
-                    </div>
-                    <div className="photo-item">
-                        <img src="./img/couple/groom1.jpg" alt="Дима"/>
-                        <div className="his-her-name">
-                            <h2>БАСОВА<span className="last-name">&nbsp;Наташа</span></h2>
-                        </div>
-                     </div>   
+               <div className="couple-container container">
+
+                    <div className="couple-item">
+                        <div className="his-her-photo"><img src="./img/couple/bride.jpg" alt="Наташа"/></div>
+                        <h2>Наташа<small>Невеста</small></h2>
+                        <p>Первый раз мы встретились в 2013 году. Тогда я подумать не могла, что мы решим быть вместе, как говорится, и в горе и радости.</p>
+                     </div>
+                   <span className="ampersant">&</span>
+                   <div className="couple-item">
+                       <div className="his-her-photo"><img src="./img/couple/groom1.jpg" alt="Дима"/></div>
+                       <h2>Дима <small>Жених</small></h2>
+                       <p>Первый раз мы встретились в 2013 году. Тогда я подумать не могла, что мы решим быть вместе, как говорится, и в горе и радости.</p>
+                   </div>
+
                </div>
+               <div className="image-divider"></div>
            </section>
         );
     }

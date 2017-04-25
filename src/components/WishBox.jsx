@@ -44,9 +44,19 @@ const WishBox = React.createClass({
     render() {
         return (
             <section className="wishes-section">
-                <h2>Книга пожеланий</h2>
-                <WishList data={this.state.data}/>
-                <WishForm onWishSubmit={this.handleWishSubmit}/>
+                <div className="container">
+                    <div className="h2">Книга пожеланий</div>
+                    <div className="subtitle-center">Оставь свое пожелание и мы поместим его в нашу Книгу пожеланий
+                        и будем бережно хранить ее и перечитывать :)</div>
+                    <div className="container-flex">
+                        <div className="comment-list flex-item">
+                            <WishList data={this.state.data}/>
+                        </div>
+                        <div className="wish-box flex-item">
+                            <WishForm onWishSubmit={this.handleWishSubmit}/>
+                        </div>
+                    </div>
+                </div>
             </section>
         );
     }

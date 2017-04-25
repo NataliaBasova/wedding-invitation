@@ -34,7 +34,7 @@ const Clock = React.createClass({
 
         return (
             <section className="clock-section">
-                <div className="clock-container">
+                <div className="clock-container container">
                     <h2>До нашей свадьбы осталось</h2>
                     <div className="days"><span>{this.state.days}</span> <span className="subtitle">days</span> </div>
                     <div className="hours"><span>{this.state.hours}</span> <span className="subtitle">hours</span></div>

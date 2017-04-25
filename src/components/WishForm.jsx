@@ -33,16 +33,17 @@ const WishForm = React.createClass({
         return (
             <form onSubmit={this.handleSubmit}>
                 <input type="text"
-                       placeholder="Имя"
+                       placeholder="Представьтесь"
                        value={this.state.author}
                        onChange={this.handleChange}
                        ref="name"
                 />
                 <textarea
+                    placeholder="Напишите свое пожелание"
                     value={this.state.wishes}
                     onChange={this.handleChange}
                     ref="wishes" />
-                <button disabled={!this.state.author || !this.state.wishes}>Отправить</button>
+                <button disabled={!this.state.author || !this.state.wishes}>Поделиться</button>
             </form>
 
         );

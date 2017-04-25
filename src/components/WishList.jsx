@@ -11,7 +11,7 @@ const WishList = React.createClass({
             );
         });
         return (
-            <div className="commentList">
+            <div>
                 {wishesNodes}
             </div>
         );
