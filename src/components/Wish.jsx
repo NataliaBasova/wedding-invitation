@@ -3,11 +3,11 @@ import React from 'react';
 const Wish = React.createClass({
     render: function() {
         return (
-            <div className="wish">
-                <h5 className="wishAuthor">
+            <div className="wish-item">
+                <div className="author">
                     {this.props.author}
-                </h5>
-                {this.props.children}
+                </div>
+                <div className="text">{this.props.children}</div>
             </div>
         );
     }

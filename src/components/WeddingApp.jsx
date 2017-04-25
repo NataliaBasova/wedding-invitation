@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header.jsx';
 import Home from './Home.jsx';
 import Couple from './Couple.jsx';
+import Details from './Details.jsx'
 import WishBox from './WishBox.jsx';
 import InstagramBox from './InstagramBox.jsx';
 import Clock from './Clock.jsx';
@@ -16,6 +17,7 @@ const WeddingApp = React.createClass({
                 <Home/>
                 <Clock deadline="May 12, 2017"/>
                 <Couple/>
+                <Details/>
                 <WishBox url="/api/comments" pollInterval={2000}/>
                 <InstagramBox token="312720290.9341300.7fe62e760cda411fab151458265dc9a0"
                                clientId="9341300a9fd64b6484a566dce8085e0b"

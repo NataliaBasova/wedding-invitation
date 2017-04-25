@@ -1,5 +1,5 @@
 import React from 'react';
-import IconLeaf from './icons/Leaf.jsx'
+import IconHeart from './icons/Heart.jsx'
 
 const Clock = React.createClass({
 
@@ -34,13 +34,15 @@ const Clock = React.createClass({
 
         return (
             <section className="clock-section">
-                <div className="clock-container">
+                <div className="clock-container container">
                     <h2>До нашей свадьбы осталось</h2>
-                    <div className="days"><span>{this.state.days}</span> <span className="subtitle">days</span> </div>
-                    <div className="hours"><span>{this.state.hours}</span> <span className="subtitle">hours</span></div>
-                    <div className="minutes"><span>{this.state.minutes}</span> <span className="subtitle">minutes</span></div>
-                    <div className="seconds"><span>{this.state.seconds}</span> <span className="subtitle">seconds</span></div>
-                    {/*<IconLeaf width="142" height="112" leafFill="#fff"/>*/}
+                    <div className="flex-item-7 days"><span>{this.state.days}</span> <span className="subtitle">дней</span> </div>
+                    <div className="flex-item-7"><IconHeart/></div>
+                    <div className="flex-item-7 hours"><span>{this.state.hours}</span> <span className="subtitle">часов</span></div>
+                    <div className="flex-item-7"><IconHeart/></div>
+                    <div className="flex-item-7 minutes"><span>{this.state.minutes}</span> <span className="subtitle">минут</span></div>
+                    <div className="flex-item-7"><IconHeart/></div>
+                    <div className="flex-item-7 seconds"><span>{this.state.seconds}</span> <span className="subtitle">секунд</span></div>
                 </div>
             </section>
         );
