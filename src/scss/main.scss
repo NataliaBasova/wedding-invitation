@@ -60,7 +60,7 @@ h2, .h2, h3, h4 {
   text-transform: uppercase;
 }
 
-h1, .h1, .subtitle  {
+h1, .h1  {
   font-family: $font-family-savoye;
   font-size: 2.7em;
   font-weight: 400;
@@ -205,6 +205,11 @@ img {
     flex: 0 0 100%;
   }
 
+  .flex-item-7  {
+    flex: 0 0 7%;
+    margin: 0 0.2em;
+  }
+
   @media (min-width: 48em) {
     justify-content: space-between;
     .flex-item  {
@@ -281,40 +286,34 @@ img {
   }
 }
 
-.clock-section  {
-  color: $gray;
+.clock-container  {
+  @extend .container-flex;
+  align-items: center;
+  justify-content: center;
 
-  .clock-container  {
-    @extend .container-flex;
+  span:first-child  {
+    font-size: 1.5em;
 
-    justify-content: space-around;
+    @media  (min-width: 768px)  {
+      font-size: 3.3em;
+    }
+  }
 
-    div  {
-      @media (min-width: 768px) {
-        border: 1px double;
-        height: 18em;
-      }
+  .subtitle {
+    font-size: 1.2em;
+    font-family: $font-family-savoye;
 
-      span:first-child  {
-        font-size: 1.5em;
-
-        @media  (min-width: 768px){
-          font-size: 5.5em;
-        }
-      }
-      display: inherit;
-      flex: 0 0 18%;
-      flex-direction: column;
-      width: 18%;
-      align-items: center;
-      justify-content: center;
+    @media  (min-width: 768px)  {
+      font-size: 2em;
     }
   }
 }
 
+
 .couple {
   background-image: url('../body-bg.jpg');
 }
+
 .couple-container {
   @extend .container-flex;
   justify-content: space-between;

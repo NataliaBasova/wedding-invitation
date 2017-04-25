@@ -19,8 +19,8 @@ IconHeart.propTypes = {
     fill: PropTypes.string
 };
 IconHeart.defaultProps = {
-    width: '2em',
-    height: '2em',
+    width: '1.5em',
+    height: '1.5em',
     fill: '#fdd3cd'
 
 };
