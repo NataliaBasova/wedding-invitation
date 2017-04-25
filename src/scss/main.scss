@@ -35,7 +35,7 @@ $link-color:            $brand-primary;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%);
 
-$logo-size: 12em;
+$logo-size: 11em;
 
 * {
   box-sizing: border-box;
@@ -179,10 +179,10 @@ img {
     justify-content: space-between;
 
     a {
-      color: $gray-base;
+      color: $gray-dark;
       text-transform: uppercase;
       &:hover {
-        color: $gray-dark;
+        color: $gray-darker;
       }
     }
   }
@@ -228,8 +228,8 @@ img {
   .header-container {
     @extend .container-flex;
     position: relative;
-    padding-top: 3.5em;
-    padding-bottom: 3.5em;
+    padding-top: 2.8em;
+    padding-bottom: 2.8em;
   }
   .logo {
     position: absolute;
