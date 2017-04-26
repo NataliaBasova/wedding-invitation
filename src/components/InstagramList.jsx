@@ -51,7 +51,7 @@ export default class InstagrammList extends Component {
 
 
         return (
-            <div>{instaNodes}</div>
+            <div className="gallery container-flex flex-cols-4">{instaNodes}</div>
         )
     }
 
@@ -73,7 +73,10 @@ export default class InstagrammList extends Component {
 
     render() {
         return(
-           <div className="gallery">
+           <div className="container">
+               <div className="h2">Фото</div>
+               <div className="subtitle-center">Фотографии со свадьбы можно будет найти в Instagram по хештегу #dnWedding.
+                   Профессиональные фотографии со свадьбы будут загружены чуть позже!</div>
                {this.renderImage()}
                <Lightbox
                    currentImage={this.state.currentImage}
