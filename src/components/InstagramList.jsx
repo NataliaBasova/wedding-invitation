@@ -49,7 +49,6 @@ export default class InstagrammList extends Component {
             );
         });
 
-
         return (
             <div className="gallery container-flex flex-cols-4">{instaNodes}</div>
         )

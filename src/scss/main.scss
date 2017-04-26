@@ -360,20 +360,22 @@ img {
   }
 
   .ampersant  {
-    flex: 1;
-    margin-bottom: 0.85em;
-    font-size: 5.5em;
+    font-size: 7.5em;
     color: $brand-primary;
     font-family: $font-family-savoye;
-  }
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
 
-  .couple-item {
-    flex: 8;
-
-    .his-her-photo  {
-      margin-bottom: 2.5em;
+    @media (min-width: 48em){
+    flex: 0;
+    padding-bottom: 0.6em;
     }
   }
+
+  .his-her-photo  {
+    margin-bottom: 2.5em;
+  }
+
 }
 
 .image-divider  {
@@ -496,6 +498,8 @@ img {
 }
 
 .instagram-section {
+
+
   .instagram-img  {
     display: inline-block;
     position: relative;
@@ -521,5 +525,25 @@ img {
       }
     }
   }
+}
+
+.gmap-section {
+  background-image: url('../body-bg.jpg');
+
+  .container-flex {
+    align-items: center;
+  }
+
+  .adress {
+    font-size: 1.3em;
+  }
+  .gmap-canvas  {
+      width: 100%;
+      height: 400px;
+  }
+}
+
+.footer {
+
 }
 
