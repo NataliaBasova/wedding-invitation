@@ -43,7 +43,7 @@ const WishForm = React.createClass({
                     value={this.state.wishes}
                     onChange={this.handleChange}
                     ref="wishes" />
-                <button disabled={!this.state.author || !this.state.wishes}>Поделиться</button>
+                <button className="button" disabled={!this.state.author || !this.state.wishes}>Поделиться</button>
             </form>
 
         );

@@ -21,7 +21,7 @@ const InstagramBox = React.createClass({
 
     render() {
         return (
-            <section className="insta-section">
+            <section className="instagram-section">
                 <InstagramList result={this.state.result}/>
             </section>
         );

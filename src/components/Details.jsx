@@ -9,7 +9,7 @@ export default class Details extends Component {
     render () {
         return (
             <section className="detail">
-                <div className="detail-conteiner">
+                <div className="detail-conteiner container">
                     <div className="h2">Как все будет проходить</div>
                     <div className="detail-item">
                         <div className="flex-item">
