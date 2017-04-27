@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 import InstagramList from './InstagramList.jsx'
 
 const InstagramBox = React.createClass({
@@ -21,7 +22,7 @@ const InstagramBox = React.createClass({
 
     render() {
         return (
-            <section className="instagram-section">
+            <section id="instagram-section" className="instagram-section" name="instagram-section">
                 <InstagramList result={this.state.result}/>
             </section>
         );

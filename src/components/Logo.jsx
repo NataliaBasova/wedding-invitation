@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 
+export default class Logo extends Component {
 
-const Logo = React.createClass({
-     render: function() {
-         return (
-             <a className="logo" href="">
-                 <img  src="./img/logo.svg" alt="D&N"/>
-             </a>
-            );
-        }
-    });
+    render() {
+        return (
+              <img  src="./img/logo.svg" alt="D&N"/>
+        );
+     }
+}
 
-export default Logo;

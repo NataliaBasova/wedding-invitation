@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 import WishList from './WishList.jsx';
 import WishForm from './WishForm.jsx';
 
@@ -43,7 +44,7 @@ const WishBox = React.createClass({
 
     render() {
         return (
-            <section className="wishes-section">
+            <section id="wishes-section" className="wishes-section" name="wishes-section">
                 <div className="container">
                     <div className="h2">Книга пожеланий</div>
                     <div className="subtitle-center">Оставь свое пожелание и мы поместим его в нашу Книгу пожеланий

@@ -1,20 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Scroll from './script/scroll.js'
+import Menu from './script/menu.js'
+import Logo from './Logo.jsx'
 
-const Navigation = React.createClass({
+export default class  Navigation extends Component {
     render() {
         return (
             <nav className="nav">
               <ul>
-                  <li><a href="">Наша свадьба</a></li>
-                  <li><a href="">Приглашение</a></li>
-                  <li><a href="">Программа</a></li>
-                  <li><a href="">Фото</a></li>
-                  <li><a href="">Книга пожеланий</a></li>
-                  <li><a href="">Контакты</a></li>
+                  <li className="logo"><Logo/></li>
+                  <li className="item"><a href="#home-section">Наша свадьба</a></li>
+                  <li className="item"><a href="#detail-section">Программа</a></li>
+                  <li className="item"><a href="#gmap-section">Как добраться</a></li>
+                  <li className="item"><a href="#wishes-section">Книга пожеланий</a></li>
+                  <li className="item"><a href="#instagram-section">Фото</a></li>
               </ul>
             </nav>
         )
     }
-});
-
-export default Navigation;
+}

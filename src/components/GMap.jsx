@@ -40,7 +40,7 @@ export default class GMap extends Component {
 
     render() {
         return (
-            <div className="gmap-section">
+            <div id="gmap-section" className="gmap-section" name="gmap-section">
                 <div className="container container-flex">
                     <div className="flex-item">
                         <h4>Адрес:</h4>
