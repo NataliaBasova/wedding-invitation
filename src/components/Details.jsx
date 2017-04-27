@@ -8,7 +8,7 @@ import IconPhoto from './icons/Photo.jsx';
 export default class Details extends Component {
     render () {
         return (
-            <section className="detail">
+            <section id="detail-section" className="detail" name="detail-section">
                 <div className="detail-conteiner container">
                     <div className="h2">Как все будет проходить</div>
                     <div className="detail-item">

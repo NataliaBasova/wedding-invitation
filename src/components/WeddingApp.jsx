@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Header from './Header.jsx';
 import Home from './Home.jsx';
 import Couple from './Couple.jsx';
@@ -9,8 +9,7 @@ import GMap from './GMap.jsx'
 import Clock from './Clock.jsx';
 import Footer from './Footer.jsx';
 
-const WeddingApp = React.createClass({
-
+export default class WeddingApp extends Component {
     render() {
         return (
             <div>
@@ -29,6 +28,4 @@ const WeddingApp = React.createClass({
             </div>
         );
     }
-});
-
-export default WeddingApp;
+}

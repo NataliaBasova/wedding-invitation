@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Couple = React.createClass({
+export default class Couple extends Component {
     render() {
         return (
            <section className="couple">
@@ -23,6 +23,4 @@ const Couple = React.createClass({
            </section>
         );
     }
-});
-
-export default Couple;
+}

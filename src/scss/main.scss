@@ -267,6 +267,44 @@ img {
     background-color: #fff;
   }
 
+  @media screen and (max-width: 700px) {
+    transition: all .25s ease;
+    &.open {
+      top: 0;
+    }
+    &.closed {
+      top: -19em;
+    }
+    .header-container {
+      padding-top: 1.8em;
+      padding-bottom: 0;
+    }
+    .nav  {
+      margin-left: 0;
+    }
+      ul {
+        flex-direction: column;
+        align-items: center;
+
+          .logo {
+            position: relative;
+            width: 8em;
+            padding: 1em;
+            transition: all .25s;
+            order: 5;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          .item {
+            padding: 1.15em;
+            border-bottom: 1px $brand-primary dotted;
+          }
+
+      }
+  }
 }
 
 ///////Home
@@ -544,7 +582,4 @@ img {
   }
 }
 
-.footer {
-
-}
 

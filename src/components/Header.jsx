@@ -1,18 +1,14 @@
-import React from 'react';
-import Logo from './Logo.jsx';
+import React, { Component } from 'react';
 import Navigation from './Navigation.jsx';
 
-const Header = React.createClass({
+export default class Header extends Component {
     render() {
         return (
             <header className="header">
                 <div className="header-container container">
-                    <Logo />
-                    <Navigation/>
+                  <Navigation/>
                 </div>
             </header>
         );
     }
-});
-
-export default Header;
+}
