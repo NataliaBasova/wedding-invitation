@@ -74,7 +74,7 @@ export default class InstagrammList extends Component {
         return(
            <div className="container">
                <div className="h2">Фото</div>
-               <div className="subtitle-center">Фотографии со свадьбы можно будет найти в Instagram по хештегу #dnWedding.
+               <div className="subtitle-center">Фотографии со свадьбы можно будет найти в Instagram по хештегу <strong>#dnWedding</strong>.
                    Профессиональные фотографии со свадьбы будут загружены чуть позже!</div>
                {this.renderImage()}
                <Lightbox
