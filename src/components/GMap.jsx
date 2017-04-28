@@ -8,6 +8,7 @@ export default class GMap extends Component {
 
         this.state = {
             url: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBciyk63lqj1HQShs9CV6ER3fwaMJGRbM0&callback",
+            image: './img/map-marker.png'
         }
 
     }
@@ -22,6 +23,14 @@ export default class GMap extends Component {
         head.appendChild(script);
     }
 
+    toggleBounce(marker) {
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
+
     componentDidMount(){
         this.loadScript(this.state.url, ()=>{
             this.map = new google.maps.Map(this.refs.map, {
@@ -32,8 +41,19 @@ export default class GMap extends Component {
 
             this.marker = new google.maps.Marker({
                 position: this.props.initialCenter,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                icon: this.state.image,
                 map: this.map
             });
+
+            this.marker.addListener('click', (evt) => {
+                if (this.marker.getAnimation() !== null) {
+                    this.marker.setAnimation(null);
+                } else {
+                    this.marker.setAnimation(google.maps.Animation.BOUNCE);
+                }
+            })
         })
 
     }

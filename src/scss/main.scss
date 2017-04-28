@@ -3,7 +3,6 @@
 // Variables
 // --------------------------------------------------
 
-
 //== Colors
 //
 
@@ -107,7 +106,11 @@ a {
 p {
   margin: 1em 0;
   line-height: 1.4;
+}
 
+strong  {
+  font-weight: 400;
+  color: darken($gray-base, 15%);
 }
 
 button, input, textarea {
@@ -191,7 +194,6 @@ img {
   }
 }
 
-
 .container  {
   max-width: 1024px;
   margin-left: auto;
@@ -240,8 +242,6 @@ img {
     }
   }
 }
-
-
 
 ///////// Header
 .header {
@@ -372,7 +372,6 @@ img {
   }
 }
 
-
 .couple {
   background-image: url('../body-bg.jpg');
 }
@@ -406,14 +405,13 @@ img {
 
     @media (min-width: 48em){
     flex: 0;
-    padding-bottom: 0.6em;
+    padding-bottom: 0.9em;
     }
   }
 
   .his-her-photo  {
     margin-bottom: 2.5em;
   }
-
 }
 
 .image-divider  {
@@ -537,7 +535,6 @@ img {
 
 .instagram-section {
 
-
   .instagram-img  {
     display: inline-block;
     position: relative;
@@ -581,5 +578,3 @@ img {
       height: 400px;
   }
 }
-
-
