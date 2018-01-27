@@ -57,6 +57,7 @@ export default class Details extends Component {
                         </div>
                     </div>
                 </div>
+                <div className="image-divider"></div>
 
             </section>
         );

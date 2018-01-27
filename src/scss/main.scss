@@ -35,6 +35,7 @@ $link-color:            $brand-primary;
 $link-hover-color:      darken($link-color, 15%);
 
 $logo-size: 11em;
+$header-height: 6.6em;
 
 * {
   box-sizing: border-box;
@@ -176,6 +177,12 @@ img {
   fill: $gray-light;
 }
 
+.divider  {
+  background-size: cover;
+  height: 380px;
+  opacity: 0.7;
+}
+
 .nav  {
   flex: 1;
   margin-left: $logo-size;
@@ -192,6 +199,10 @@ img {
       }
     }
   }
+}
+
+.wrapper  {
+  padding-top: $header-height;
 }
 
 .container  {
@@ -212,7 +223,7 @@ img {
     padding-bottom: 1em;
   }
 
-  .flex-item-7 {
+  .flex-item-6 {
     flex: 0 0 7%;
     margin: 0 0.2em;
   }
@@ -246,7 +257,9 @@ img {
 ///////// Header
 .header {
   position: fixed;
+  top: 0;
   width: 100%;
+  min-height: $header-height;
   z-index: 100;
   background-color: #fff;
 
@@ -310,9 +323,6 @@ img {
 ///////Home
 .home-section {
   position: relative;
-  background-image: url("../img/home/01.jpg");
-  background-size: cover;
-  background-position: 50%;
 
   &:before  {
     content: '';
@@ -321,16 +331,27 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.4;
-    background-color: #8f948d;
+    z-index: 2;
+    background-color: rgba(152,122,122,0.32);
   }
 }
 
-.home-title {
-  @extend .container;
-  max-width: 768px;
-  z-index: 2;
+.video-container {
   position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.home-title {
 
   .home-subtitle  {
     font-size: 0.6em;
@@ -340,7 +361,17 @@ img {
   .title-date {
     font-size: 1.3em;
   }
+
+  .icon-home-title {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
 }
+
 
 .love-birds  {
   padding: 2em 0;
@@ -374,6 +405,13 @@ img {
 
 .couple {
   background-image: url('../body-bg.jpg');
+
+  .image-divider  {
+    @extend .divider;
+    background-image: url("../home/bg-4.jpg");
+
+    background-position-y: 50%;
+  }
 }
 
 .couple-container {
@@ -414,11 +452,6 @@ img {
   }
 }
 
-.image-divider  {
-  background-image: url("../home/049.jpg");
-  background-size: cover;
-  height: 380px;
-}
 
 .detail {
 
@@ -505,6 +538,12 @@ img {
       }
     }
   }
+
+  .image-divider  {
+    @extend .divider;
+    background-image: url("../home/bg-3.jpg");
+    background-position-y: 50%;
+  }
 }
 
 .wishes-section  {
@@ -530,6 +569,12 @@ img {
       margin-left: 4em;
       order:  2;
     }
+  }
+
+  .image-divider  {
+    @extend .divider;
+    background-image: url("../home/bg-2.jpg");
+    background-position-y: 50%;
   }
 }
 
@@ -573,8 +618,15 @@ img {
     color: darken($gray-base, 5%);
     font-size: 1.3em;
   }
+
   .gmap-canvas  {
       width: 100%;
       height: 400px;
+  }
+  
+  .image-divider  {
+    @extend .divider;
+    background-image: url("../home/bg-1.jpg");
+    background-position-y: 100%;
   }
 }

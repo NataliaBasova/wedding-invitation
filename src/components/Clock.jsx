@@ -5,10 +5,11 @@ const Clock = React.createClass({
 
     getInitialState() {
         return {
+            months: 0,
             days: 0,
             hours: 0,
-            minutes: 0,
-            seconds: 0,
+            minutes: 0
+
         }
     },
 
@@ -21,13 +22,14 @@ const Clock = React.createClass({
     },
 
     getTimeUntil(deadline) {
-        const weddingTime = Date.parse(deadline) - Date.parse(new Date());
-        const seconds = Math.floor((weddingTime/1000) % 60);
-        const minutes = Math.floor(weddingTime/(1000*60) % 60);
-        const hours = Math.floor(weddingTime/(1000*60*60) % 24);
-        const days = Math.floor(weddingTime/(1000*60*60*24));
+        const weddingTime = Date.parse(new Date()) - Date.parse(deadline);
 
-        this.setState({days: days, hours: hours, minutes: minutes, seconds: seconds});
+        const months = Math.floor(weddingTime/(1000*60*60*24*30));
+        const days = Math.floor(weddingTime/(1000*60*60*24) - months*30);
+        const hours = Math.floor(weddingTime/(1000*60*60) % 24);
+        const minutes = Math.floor(weddingTime/(1000*60) % 60);
+
+        this.setState({days, hours, minutes, months});
     },
 
     render() {
@@ -35,14 +37,12 @@ const Clock = React.createClass({
         return (
             <section className="clock-section">
                 <div className="clock-container container">
-                    <h2>До нашей свадьбы осталось</h2>
-                    <div className="flex-item-7 days"><span>{this.state.days}</span> <span className="subtitle">дней</span> </div>
-                    <div className="flex-item-7"><IconHeart/></div>
-                    <div className="flex-item-7 hours"><span>{this.state.hours}</span> <span className="subtitle">часов</span></div>
-                    <div className="flex-item-7"><IconHeart/></div>
-                    <div className="flex-item-7 minutes"><span>{this.state.minutes}</span> <span className="subtitle">минут</span></div>
-                    <div className="flex-item-7"><IconHeart/></div>
-                    <div className="flex-item-7 seconds"><span>{this.state.seconds}</span> <span className="subtitle">секунд</span></div>
+                    <h2>Счастливы вместе</h2>
+                    <div className="flex-item-6 days"><span>{this.state.months}</span> <span className="subtitle">месяцев</span> </div>
+                    <div className="flex-item-6"><IconHeart/></div>
+                    <div className="flex-item-6 days"><span>{this.state.days}</span> <span className="subtitle">дней</span> </div>
+                    <div className="flex-item-6"><IconHeart/></div>
+                    <div className="flex-item-6 hours"><span>{this.state.hours}</span> <span className="subtitle">часов</span></div>
                 </div>
             </section>
         );
