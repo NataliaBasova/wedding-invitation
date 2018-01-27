@@ -7,7 +7,7 @@ const Home = React.createClass({
             <section id="home-section" className="home-section" name="home-section">
                 <figure className="video-container video-container-overlay">
                     <video autoPlay="true" muted loop id="myVideo">
-                        <source src="./img/video/wedding-invitation.mp4" type="video/mp4" />
+                        <source src="./img/video/days.mp4" type="video/mp4" />
                     </video>
                 </figure>
                 <div className="home-title">
