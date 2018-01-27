@@ -68,6 +68,7 @@ export default class GMap extends Component {
                     </div>
                     <div className="gmap-canvas flex-item" ref="map">I should be a map</div>
                 </div>
+                <div className="image-divider"></div>
             </div>
         );
     }

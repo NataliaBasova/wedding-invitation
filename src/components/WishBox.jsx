@@ -58,6 +58,7 @@ const WishBox = React.createClass({
                         </div>
                     </div>
                 </div>
+                <div className="image-divider"></div>
             </section>
         );
     }
