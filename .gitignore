@@ -3,3 +3,4 @@ public/build
 .idea
 wishes.json
 *.mp4
+*.log
