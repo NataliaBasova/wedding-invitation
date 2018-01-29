@@ -19,7 +19,7 @@ export default class WeddingApp extends Component {
                 <Couple/>
                 <Details/>
                 <GMap initialCenter={{lng: 34.654871, lat: 49.598255}} />
-                <WishBox url="/api/comments" pollInterval={2000}/>
+                {/*<WishBox url="/api/comments" pollInterval={2000}/>*/}
                 <InstagramBox token="312720290.9341300.7fe62e760cda411fab151458265dc9a0"
                                clientId="9341300a9fd64b6484a566dce8085e0b"
                                hashTag="dnWedding"/>

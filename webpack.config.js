@@ -5,6 +5,10 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
+    devServer: {
+        host: '0.0.0.0',
+        port: 8080,
+    },
     entry: ["./src/index.js", "./src/scss/main.scss"],
     output: {
         path: __dirname + '/public/build/',
